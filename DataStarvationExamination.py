@@ -49,7 +49,8 @@ class DnnAdapter:
 
 def preprocess(name: str):
     # read the data
-    with open(f"/content/{name}.csv", "r") as file:
+    # NOTE: Exact formating of the file location may need to change based on achitecture.
+    with open(f"content/{name}.csv", "r") as file:
         reader = csv.reader(file)
         data = []
         # skip the labels
